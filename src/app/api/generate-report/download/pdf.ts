@@ -69,8 +69,7 @@ async function generatePreDiagnosisReport(data: PreDiagnosisSummary): Promise<Bl
   doc.end();
   return new Promise((resolve, reject) => {
     stream.on('finish', () => {
-      const blob = fs.readFileSync(stream.path);
-      fs.unlinkSync(stream.path); // Clean up the file after reading
+      const blob = fs.readFileSync(stream.path);// Clean up the file after reading
       resolve(new Blob([blob], { type: 'application/pdf' }));
     });
 
