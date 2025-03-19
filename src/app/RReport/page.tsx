@@ -2,6 +2,7 @@
 
 import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Header from "../Components/Header";
 
 function ReportContent() {
   const searchParams = useSearchParams();
@@ -13,6 +14,8 @@ function ReportContent() {
   console.log(report);
 
   return (
+    <>
+    <Header/>
     <div className="max-w-2xl mx-auto space-y-6 p-6">
       <h2 className="text-3xl font-bold text-center text-blue-700">Remedies</h2>
       <div className="p-4 border rounded-lg shadow-md bg-gray-100">
@@ -30,6 +33,7 @@ function ReportContent() {
         </ul>
       </div>
     </div>
+    </>
   );
 }
 
