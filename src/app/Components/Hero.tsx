@@ -9,7 +9,7 @@ const Hero = () => {
           Healthy Me
         </h1>
         <p className="text-xl mx-auto text-gray-600 max-w-2xl">
-          Your comprehensive health companion for symptom checking, finding medical professionals, and more.
+          Your comprehensive health companion for symptom checking, decoding prescriptions, and more.
         </p>
         {/*Card*/}
         <div className="bg-white rounded-lg p-8 mt-10 shadow-md">
