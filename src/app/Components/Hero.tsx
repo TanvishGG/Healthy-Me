@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
 
             <div className="flex-1 justify-evenly">
-              <img src="/Images/tree.webp" alt="Logo" className="object-cover h-150 w-150 rounded-4xl"></img>
+              <img src="/Images/tree.jpg" alt="Logo" className="object-cover h-150 w-150 rounded-4xl"></img>
             </div>
           </div>
         </div>
