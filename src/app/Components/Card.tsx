@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ title, description, buttonText, color,redir
         {/* Button */}
         <button 
           onClick={() => router.push(redirect_uri)}
-          className={`mt-4 w-full py-2 text-white rounded-lg ${color} hover:opacity-80 transition`}
+          className={`mt-4 hover:cursor-pointer w-full py-2 text-white rounded-lg ${color} hover:opacity-80 transition`}
         >
           {buttonText} →
         </button>

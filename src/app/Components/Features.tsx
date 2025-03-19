@@ -3,8 +3,8 @@ import Card from "./Card";
 import { redirect } from "next/dist/server/api-utils";
 const Features = () => {
   const cards = [
-    { title: "Pre-diagnosis Report", description: "Input symptoms for a pre-diagnosis", buttonText: "Get Started", color: "bg-Doc", redirect_uri: "/generate-report" },
-    { title: "Prescription Reader", description: "Upload a prescription for analysis", buttonText: "Get Started", color: "bg-yellow-500", redirect_uri: "/analyze-prescription"},
+    { title: "Pre-diagnosis Report", description: "Input symptoms for a pre-diagnosis", buttonText: "Get Started", color: "bg-Doc", redirect_uri: "/symptom-checker" },
+    { title: "Prescription Reader", description: "Upload a prescription for analysis", buttonText: "Get Started", color: "bg-yellow-500", redirect_uri: "/prescription"},
     { title: "Skin Infection Checker", description: "Check probability of skin infections", buttonText: "Get Started", color: "bg-purple-500", redirect_uri: "/skin-infection-checker"},
     { title: "Common Remedies", description: "Get remedies for common ailments", buttonText: "Get Started", color: "bg-green-700", redirect_uri: "/common-remedies"},
   ];

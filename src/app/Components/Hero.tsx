@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const Hero = () => {
@@ -21,11 +22,15 @@ const Hero = () => {
                 Our medical assistant helps you understand your symptoms, find healthcare providers, and access valuable health information.
               </p>
               <div className="flex flex-col md:flex-row  md:space-y-0 md:space-x-8 mt-10 mr-10 justify-center">
-                <button className="hover:cursor-pointer bg-Doc hover:bg-white hover:text-Doc hover:border text-white px-2 py-2 rounded font-semibold transition">
-                  Check Symptoms →
+                <button onClick={() => {
+                  window.location.href = "/symptom-checker";
+                }} className="hover:cursor-pointer bg-Doc hover:bg-white hover:text-Doc hover:border text-white px-2 py-2 rounded font-semibold transition">
+                  Get Report →
                 </button>
-                <button className="hover:cursor-pointer bg-white border hover:bg-Doc hover:text-white text-Doc px-2 py-2 rounded font-semibold transition">
-                  Get Report
+                <button onClick={() => {
+                  window.location.href = "/prescription";
+                }} className="hover:cursor-pointer bg-white border hover:bg-Doc hover:text-white text-Doc px-2 py-2 rounded font-semibold transition">
+                  Analyze Prescription
                 </button>
               </div>
             </div>
