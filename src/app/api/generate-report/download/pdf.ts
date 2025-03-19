@@ -4,7 +4,7 @@ import { PreDiagnosisSummary } from '@/app/interfaces/report';
 
 async function generatePreDiagnosisReport(data: PreDiagnosisSummary): Promise<Blob> {
   const doc = new PDFDocument({ margin: 50 });
-  const stream = fs.createWriteStream(`./${Date.now()}_${data.name}.pdf`);
+  const stream = fs.createWriteStream(`./reports/${Date.now()}_${data.name}.pdf`);
   doc.pipe(stream);
 
   // Header Section - Hospital Info
