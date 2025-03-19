@@ -5,18 +5,15 @@ import type React from "react"
 import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import {
   Upload,
   ImageIcon,
   X,
-  Send,
   Camera,
 } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import Header from "../Components/Header"
-import { Medicine, Prescription } from "../interfaces/prescription"
 import { PossibleDisease } from "../interfaces/report"
 
 export default function PrescriptionReader() {
