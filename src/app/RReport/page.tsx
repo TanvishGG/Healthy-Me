@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function Rreport() {
+function ReportContent() {
   const searchParams = useSearchParams();
   const data = searchParams.get("data");
 
@@ -30,5 +30,13 @@ export default function Rreport() {
         </ul>
       </div>
     </div>
+  );
+}
+
+export default function Rreport() {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <ReportContent />
+    </Suspense>
   );
 }

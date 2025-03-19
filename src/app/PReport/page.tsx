@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function Preport() {
+function ReportContent() {
   const searchParams = useSearchParams();
   const data = searchParams.get("data");
 
@@ -92,7 +92,7 @@ export default function Preport() {
       <div className="text-center">
         <button
           onClick={() => {
-         window.location.href = `/api/generate-report/download?data=${encodeURI(data.toString())}`
+            window.location.href = `/api/generate-report/download?data=${encodeURI(data.toString())}`
           }}
           className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700"
         >
@@ -100,5 +100,13 @@ export default function Preport() {
         </button>
       </div>
     </div>
+  );
+}
+
+export default function Preport() {
+  return (
+    <Suspense fallback={<p className="text-center">Loading...</p>}>
+      <ReportContent />
+    </Suspense>
   );
 }

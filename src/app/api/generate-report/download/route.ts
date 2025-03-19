@@ -2,7 +2,7 @@
 import generatePreDiagnosisReport from "./pdf";
 import { PreDiagnosisSummary } from "@/app/interfaces/report";
 
-export async function GET(req: Request, res: Response) {
+export async function GET(req: Request) {
     const params = new URLSearchParams(req.url.split("?")[1]);
     const data = params.get('data');
     if (!data) {
