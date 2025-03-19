@@ -9,7 +9,7 @@ const Hero = () => {
           Healthy Me
         </h1>
         <p className="text-xl mx-auto text-gray-600 max-w-2xl">
-          Your comprehensive health companion for symptom checking, decoding prescriptions, and more.
+          Your comprehensive health companion for pre-diagnosis report, decoding prescriptions, and more.
         </p>
         {/*Card*/}
         <div className="bg-white rounded-lg p-8 mt-10 shadow-md">
@@ -19,7 +19,7 @@ const Hero = () => {
                 Get Started With Your Health Journey
               </h1>
               <p className="text-gray-600 mt-10">
-                Our medical assistant helps you understand your symptoms, find healthcare providers, and access valuable health information.
+                Our medical assistant helps you understand your symptoms, generate pre-diagnosis report, decode prescriptions, and more..
               </p>
               <div className="flex flex-col md:flex-row  md:space-y-0 md:space-x-8 mt-10 mr-10 justify-center">
                 <button onClick={() => {
