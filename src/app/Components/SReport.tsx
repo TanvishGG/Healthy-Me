@@ -66,7 +66,7 @@ export default function SymptomCheckerForm() {
     } 
   };
   return (
-    <div className="max-w-lg mx-auto space-y-6">
+    <div className="max-w-lg mx-auto space-y-6 mt-5">
       {/* Title */}
       <h2 className="text-3xl font-bold text-center text-blue-700 mt-">Pre-Diagnosis Report</h2>
 
@@ -114,10 +114,10 @@ export default function SymptomCheckerForm() {
                 <div key={item.id} className="flex gap-2">
                   <Input placeholder="Symptom" {...register(`symptoms.${index}.name` as const)} />
                   <Input placeholder="Duration" {...register(`symptoms.${index}.duration` as const)} />
-                  <Button type="button" onClick={() => remove(index)} variant="destructive">✕</Button>
+                  <Button type="button" className="hover:cursor-pointer" onClick={() => remove(index)} variant="destructive">✕</Button>
                 </div>
               ))}
-              <Button type="button" onClick={() => append({ name: "", duration: "" })} className="mt-2">
+              <Button type="button" onClick={() => append({ name: "", duration: "" })} className="mt-2 hover:cursor-pointer">
                 + Add Symptom
               </Button>
             </div>
@@ -143,7 +143,7 @@ export default function SymptomCheckerForm() {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+            <Button type="submit" className="w-full hover:cursor-pointer bg-blue-600 hover:bg-blue-700">
               Submit
             </Button>
           </form>

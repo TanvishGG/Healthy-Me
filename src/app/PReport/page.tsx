@@ -97,7 +97,7 @@ function ReportContent() {
           onClick={() => {
             window.location.href = `/api/generate-report/download?data=${encodeURI(data.toString())}`
           }}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700"
+          className="px-4 py-2 hover:cursor-pointer bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700"
         >
           Download Report
         </button>

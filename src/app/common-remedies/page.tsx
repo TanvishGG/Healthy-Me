@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import React from "react";
+import Header from "../Components/Header";
 
 const symptomSchema = z.object({
   description: z.string().min(1, "Description is required"),
@@ -50,7 +51,9 @@ export default function SymptomCheckerForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto space-y-6">
+    <>
+    <Header/>
+    <div className="max-w-lg mx-auto space-y-6 mt-5">
       {/* Title */}
       <h2 className="text-3xl font-bold text-center text-blue-700 mt-">Find Remedies</h2>
 
@@ -74,12 +77,13 @@ export default function SymptomCheckerForm() {
               {errors.description && <p className="text-red-500 text-sm">{errors.description.message}</p>}
             </div>
             {/* Submit Button */}
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+            <Button type="submit" className="w-full hover:cursor-pointer bg-blue-600 hover:bg-blue-700">
               Submit
             </Button>
           </form>
         </CardContent>
       </Card>
     </div>
+    </>
   );
 }

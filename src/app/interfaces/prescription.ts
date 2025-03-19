@@ -8,5 +8,5 @@ export interface Medicine {
     dosage: string;
     usage: string;
     composition: string;
-    side_effects: string;
+    side_effects: string[];
 }

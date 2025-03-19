@@ -148,7 +148,7 @@ export default function PrescriptionReader() {
                         <p><strong>Description:</strong> {medicine.description}</p>
                         <p><strong>Dosage:</strong> {medicine.dosage}</p>
                         <p><strong>Usage:</strong> {medicine.usage}</p>
-                        <p><strong>Side Effects:</strong> {medicine.side_effects}</p>
+                        <p><strong>Side Effects:</strong> {medicine.side_effects.join(", ")}</p>
                       </div>
                       </li>
                     ))}
